@@ -27,6 +27,20 @@ describe('backend-express-template routes', () => {
     });
   });
   
+  it('POST /districts should add a new district', async () => {
+    const newDistrict = {
+      name: 'Dhading',
+      population: '336,067'
+    };
+    const resp = await request(app).post('/districts').send(newDistrict);
+    expect(resp.status).toBe(200);
+    expect(resp.body).toEqual({
+      id: expect.any(String),
+      ...newDistrict
+    });
+  });
+
+
   afterAll(() => {
     pool.end();
   });
