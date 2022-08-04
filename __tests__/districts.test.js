@@ -18,7 +18,7 @@ describe('backend-express-template routes', () => {
       });
   });
 
-  it('GET /districts/:id should return district with all information', async () => {
+  it('#GET /districts/:id should return district with all information by id', async () => {
     const res = await request(app).get('/districts/1');
     expect (res.body).toEqual({
       id: expect.any(String),
