@@ -8,7 +8,7 @@ describe('backend-express-template routes', () => {
     return setup(pool);
   });
   
-  it('#GET /districts should return a list of districts', async () => {
+  it('#GET /districts should return a list of all districts', async () => {
     const res = await request(app).get('/districts');
     expect(res.body.length).toEqual(3);
     expect(res.body[0]).toEqual(
