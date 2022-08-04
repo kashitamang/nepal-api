@@ -7,7 +7,7 @@ describe('backend-express-template routes', () => {
   beforeEach(() => {
     return setup(pool);
   });
-  
+
   it('#GET /districts should return a list of all district names', async () => {
     const res = await request(app).get('/districts');
     expect(res.body.length).toEqual(3);
@@ -27,7 +27,7 @@ describe('backend-express-template routes', () => {
     });
   });
   
-  it('POST /districts should add a new district', async () => {
+  it('#POST /districts should add a new district', async () => {
     const newDistrict = {
       name: 'Dhading',
       population: '336,067'
@@ -40,6 +40,14 @@ describe('backend-express-template routes', () => {
     });
   });
 
+  it('#PUT /districts/:id should update an existing district', async () => {
+    const resp = await request(app).put('/districts/1').send({
+      name: 'Dhading District',
+    });
+    console.log(resp.body);
+    expect(resp.status).toBe(200);
+    expect(resp.body.name).toBe('Dhading District');
+  });
 
   afterAll(() => {
     pool.end();
