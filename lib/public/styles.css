@@ -5,7 +5,7 @@
 }
 
 main {
-    height: 300px;
+    height: 100%;
     border: 1px solid #30363d;
     border-radius: 5px;
     color: #8b949e;
@@ -33,4 +33,7 @@ a:hover {
 footer {
     margin-bottom: 20px;
     color: #8b949e;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }
