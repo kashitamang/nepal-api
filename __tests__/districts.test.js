@@ -49,6 +49,14 @@ describe('backend-express-template routes', () => {
     expect(resp.body.name).toBe('Dhading District');
   });
 
+  it('#DELETE /districts/:id should delete a district', async () => {
+    const resp = await request(app).delete('/districs/1');
+    expect(resp.status).toBe(200);
+
+    const districtResp = await request(app).get('/districts/1');
+    expect(districtResp.status).toBe(404);
+  });
+
   afterAll(() => {
     pool.end();
   });
