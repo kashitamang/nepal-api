@@ -4,6 +4,12 @@
     margin: 20px;
 }
 
+ body {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+ }
+
 main {
     height: 100%;
     border: 1px solid #30363d;
@@ -46,13 +52,13 @@ code {
 }
 table {
     border-collapse: collapse;
-    width: 90%;
   }
   
   td, th {
     border: 1px solid #30363d;
     text-align: left;
     padding: 8px;
+    width: 100;
   }
   
   tr:nth-child(even) {
