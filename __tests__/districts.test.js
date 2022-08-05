@@ -2,6 +2,7 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
+const District = require('../lib/models/District');
 
 describe('backend-express-template routes', () => {
   beforeEach(() => {
@@ -50,11 +51,17 @@ describe('backend-express-template routes', () => {
   });
 
   it('#DELETE /districts/:id should delete a district', async () => {
-    const resp = await request(app).delete('/districs/1');
-    expect(resp.status).toBe(200);
+    //i have stuff
+    const res = await request(app).get('/districts');
+    expect(res.body.length).toEqual(3);
 
-    const districtResp = await request(app).get('/districts/1');
-    expect(districtResp.status).toBe(404);
+    const resp = await request(app).delete('/districts/1');
+    console.log(resp.body, 'hello from resp.body');
+    expect(resp.status).toBe(200);
+    //data has been modified by delete
+    const fullResponse = await request(app).get('/districts');
+    console.log(fullResponse.body);
+    expect(fullResponse.body.length).toEqual(2);
   });
 
   afterAll(() => {
