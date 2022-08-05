@@ -40,4 +40,16 @@ describe('backend-express-template routes', () => {
     });
   });
 
+  it('#PUT /castes/:id should update an existing caste', async () => {
+    const resp = await request(app).put('/castes/1').send({
+      name: 'Thamang',
+    });
+    console.log(resp.body);
+    expect(resp.status).toBe(200);
+    expect(resp.body.name).toBe('Thamang');
+  });
+
+  afterAll(() => {
+    pool.end();
+  });
 });
