@@ -40,7 +40,7 @@ CREATE TABLE exports (
 
 INSERT INTO exports (type, revenue_2020) VALUES 
     ('soybean oil', '$198M'),
-    ('synthetic staple fivers yarn', '$53.5M'),
+    ('synthetic staple fibers yarn', '$53.5M'),
     ('nutmeg, mace, and cardamoms', '$48.4M');
 
 --flowers
