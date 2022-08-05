@@ -27,4 +27,17 @@ describe('backend-express-template routes', () => {
     });
   });
 
+  it('#POST /castes should add a new Caste', async () => {
+    const newCaste = {
+      name: 'Shakya',
+      meaning: 'of Buddha'
+    };
+    const resp = await request(app).post('/castes').send(newCaste);
+    expect(resp.status).toBe(200);
+    expect(resp.body).toEqual({
+      id: expect.any(String),
+      ...newCaste
+    });
+  });
+
 });
