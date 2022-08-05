@@ -27,6 +27,20 @@ describe('backend-express-template routes', () => {
     });
   });
 
+  it('#POST /religions should add a new Religion', async () => {
+    const newReligion = {
+      type: 'Nature Worship',
+      percentage_2011: '0.46%'
+    };
+    const resp = await request(app).post('/religions').send(newReligion);
+    expect(resp.status).toBe(200);
+    expect(resp.body).toEqual({
+      id: expect.any(String),
+      ...newReligion
+    });
+  });
+
+
   afterAll(() => {
     pool.end();
   });
