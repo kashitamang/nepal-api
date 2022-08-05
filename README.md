@@ -16,10 +16,14 @@ The nepal-api (Application Programming Interface) allows you to access our small
 
 # Capabilities
 With the nepal-api, you can:
-
+<br>
+<br>
 -Search for and display datapoints
+<br>
 -Create new datapoits
+<br>
 -Update or Delete exsiting datapoints
+<br>
 -You can, for example, display a list of caste names, see more info on them based on id, and add a new caste to the database.
 
 # Using the API
