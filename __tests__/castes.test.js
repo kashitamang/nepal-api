@@ -2,7 +2,6 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
-const Caste = require('../lib/models/Caste');
 
 describe('backend-express-template routes', () => {
   beforeEach(() => {
@@ -17,6 +16,15 @@ describe('backend-express-template routes', () => {
         id: expect.any(String),
         name: expect.any(String)
       });
+  });
+
+  it('#GET /castes/:id should return caste with all information by id', async () => {
+    const res = await request(app).get('/castes/1');
+    expect (res.body).toEqual({
+      id: expect.any(String),
+      name: expect.any(String),
+      meaning: expect.any(String)
+    });
   });
 
 });
