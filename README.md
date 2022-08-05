@@ -52,3 +52,4 @@ Please visit the live site for a complete list of curl requests and endpoints.
 
 # Query Parameters
 All query parameters such as name, population, revenue_2020 are strings including id's.
+
