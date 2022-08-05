@@ -1,17 +1,12 @@
-# Template for Backend Express
+# nepal-api
 
-The Golden Rule:
-🦸 🦸‍♂️ Stop starting and start finishing. 🏁
+Use this free api to create, read, update and delete data on nepal's caste system, districts, exports, flowers, and religions.
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+| Resources        | Routes                                   |
+| -----------------| -----------------------------------------|
+| /castes          | GET all, GET by id, POST, PATCH, DELETE  |
+| /flowers         | GET all, GET by id, POST, PATCH, DELETE  |
+| /religions       | GET all, GET by id, POST, PATCH, DELETE  |
+| /exports         | GET all, GET by id, POST, PATCH, DELETE  |
+| /districts       | GET all, GET by id, POST, PATCH, DELETE  |
 
-## Scripts
-
-| command                | description                                                                         |
-| ---------------------- | ----------------------------------------------------------------------------------- |
-| `npm start`            | starts the app - should only be used in production as changes will not get reloaded |
-| `npm run start:watch`  | runs the app using `nodemon` which watches for changes and reloads the app          |
-| `npm test`             | runs the tests once                                                                 |
-| `npm run test:watch`   | continually watches and runs the tests when files are updated                       |
-| `npm run setup-db`     | sets up the database locally                                                        |
-| `npm run setup-heroku` | sets up the database on heroku                                                      |
