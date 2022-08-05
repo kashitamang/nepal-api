@@ -18,6 +18,15 @@ describe('backend-express-template routes', () => {
       });
   });
 
+  it('#GET /exports/:id should return religion with all information by id', async () => {
+    const res = await request(app).get('/exports/1');
+    expect (res.body).toEqual({
+      id: expect.any(String),
+      type: expect.any(String),
+      revenue_2020: expect.any(String)
+    });
+  });
+
   afterAll(() => {
     pool.end();
   });
