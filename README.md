@@ -1,15 +1,7 @@
-# nepal-api Support Documentation
+# nepal-api 
 
 Use this free api to create, read, update and delete data on nepal's caste system, districts, exports, flowers, and religions.
-We recommend our <a href="https://www.postman.com/kashitamang/workspace/nepal-api/overview">Postman</a> workspace to submit cURL requests 
-
-| Resources        | Routes                                   |
-| -----------------| -----------------------------------------|
-| /castes          | GET all, GET by id, POST, PATCH, DELETE  |
-| /flowers         | GET all, GET by id, POST, PATCH, DELETE  |
-| /religions       | GET all, GET by id, POST, PATCH, DELETE  |
-| /exports         | GET all, GET by id, POST, PATCH, DELETE  |
-| /districts       | GET all, GET by id, POST, PATCH, DELETE  |
+We recommend our <a href="https://www.postman.com/kashitamang/workspace/nepal-api/overview">Postman</a> workspace to import requests for all non-GET methods.
 
 # API Calls
 Introduction
@@ -31,25 +23,21 @@ With the nepal-api, you can:
 This is a RESTful API, meaning that it uses predictable URLs to access resources and, in case of an error, returns meaningful HTTP response codes.
 
 # Request Structure
-The API is accessed through GET requests following this overall pattern:
+To import a curl request, copy the request structure from the live site, on Postman visit import on the left hand sidebar > raw text > continue > import and send the request to receive JSON. The API is accessed through GET requests following this overall pattern:
 
 <div align="center">
-curl -H https://nepal-api.herokuapp.com/districts
-Response Structure
-[
-
-{"id":"1","name":"Gorkha"},
-
-{"id":"2","name":"Kathmandu"},
-
-{"id":"3","name":"Pokhara"}
-
-]
+  <code>
+    curl -H https://nepal-api.herokuapp.com/districts 
+  </code>
+  
+# Response Structure
+  <code>[{"id":"1","name":"Gorkha"},{"id":"2","name":"Kathmandu"},{"id":"3","name":"Pokhara"}]
+  </code>
 </div>
 
 # Endpoints
 Please visit the live site for a complete list of curl requests and endpoints.
 
 # Query Parameters
-All query parameters such as name, population, revenue_2020 are strings including id's.
+All query parameters such as <code>name</code>, <code>population</code>, <code>revenue_2020</code> are strings including id's.
 
