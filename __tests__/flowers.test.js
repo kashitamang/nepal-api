@@ -17,4 +17,16 @@ describe('backend-express-template routes', () => {
         name: expect.any(String)
       });
   });
+
+  it('#GET /flowers/:id should return flower with all information by id', async () => {
+    const res = await request(app).get('/flowers/1');
+    expect (res.body).toEqual({
+      id: expect.any(String),
+      name: expect.any(String),
+      color: expect.any(String)
+    });
+  });
+
+
+
 });
