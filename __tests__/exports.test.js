@@ -27,6 +27,19 @@ describe('backend-express-template routes', () => {
     });
   });
 
+  it('#POST /exports should add a new export', async () => {
+    const newExport = {
+      type: 'Knotted Carpets',
+      revenue_2020: '$55.2M'
+    };
+    const resp = await request(app).post('/exports').send(newExport);
+    expect(resp.status).toBe(200);
+    expect(resp.body).toEqual({
+      id: expect.any(String),
+      ...newExport
+    });
+  });
+
   afterAll(() => {
     pool.end();
   });
