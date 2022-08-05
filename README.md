@@ -1,4 +1,4 @@
-# nepal-api
+# nepal-api Support Documentation
 
 Use this free api to create, read, update and delete data on nepal's caste system, districts, exports, flowers, and religions.
 We recommend our <a href="https://www.postman.com/kashitamang/workspace/nepal-api/overview">Postman</a> workspace to submit cURL requests 
