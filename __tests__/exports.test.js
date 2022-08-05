@@ -40,6 +40,29 @@ describe('backend-express-template routes', () => {
     });
   });
 
+  it('#PUT /exports/:id should update an existing export', async () => {
+    const resp = await request(app).put('/exports/1').send({
+      type: 'Soybean Oil',
+    });
+    console.log(resp.body);
+    expect(resp.status).toBe(200);
+    expect(resp.body.type).toBe('Soybean Oil');
+  });
+
+  it('#DELETE /exports/:id should delete a religion', async () => {
+    //i have stuff
+    const res = await request(app).get('/exports');
+    expect(res.body.length).toEqual(3);
+
+    const resp = await request(app).delete('/exports/1');
+    console.log(resp.body, 'hello from resp.body');
+    expect(resp.status).toBe(200);
+    //data has been modified by delete
+    const fullResponse = await request(app).get('/exports');
+    console.log(fullResponse.body);
+    expect(fullResponse.body.length).toEqual(2);
+  });
+
   afterAll(() => {
     pool.end();
   });

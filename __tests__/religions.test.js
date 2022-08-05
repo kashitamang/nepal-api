@@ -49,6 +49,20 @@ describe('backend-express-template routes', () => {
     expect(resp.body.type).toBe('Bon');
   });
 
+  it('#DELETE /religions/:id should delete a religion', async () => {
+    //i have stuff
+    const res = await request(app).get('/religions');
+    expect(res.body.length).toEqual(3);
+
+    const resp = await request(app).delete('/religions/1');
+    console.log(resp.body, 'hello from resp.body');
+    expect(resp.status).toBe(200);
+    //data has been modified by delete
+    const fullResponse = await request(app).get('/religions');
+    console.log(fullResponse.body);
+    expect(fullResponse.body.length).toEqual(2);
+  });
+
   afterAll(() => {
     pool.end();
   });
