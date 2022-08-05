@@ -40,6 +40,14 @@ describe('backend-express-template routes', () => {
     });
   });
 
+  it('#PUT /religions/:id should update an existing flower', async () => {
+    const resp = await request(app).put('/religions/1').send({
+      type: 'Bon',
+    });
+    console.log(resp.body);
+    expect(resp.status).toBe(200);
+    expect(resp.body.type).toBe('Bon');
+  });
 
   afterAll(() => {
     pool.end();
