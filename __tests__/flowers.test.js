@@ -49,4 +49,22 @@ describe('backend-express-template routes', () => {
     expect(resp.body.name).toBe('Aster');
   });
 
+  it('#DELETE /flowers/:id should delete a caste', async () => {
+    //i have stuff
+    const res = await request(app).get('/flowers');
+    expect(res.body.length).toEqual(3);
+
+    const resp = await request(app).delete('/flowers/1');
+    console.log(resp.body, 'hello from resp.body');
+    expect(resp.status).toBe(200);
+    //data has been modified by delete
+    const fullResponse = await request(app).get('/flowers');
+    console.log(fullResponse.body);
+    expect(fullResponse.body.length).toEqual(2);
+  });
+
+  afterAll(() => {
+    pool.end();
+  });
+
 });
