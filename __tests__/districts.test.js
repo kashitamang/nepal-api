@@ -2,7 +2,7 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
-const District = require('../lib/models/District');
+// const District = require('../lib/models/District');
 
 describe('backend-express-template routes', () => {
   beforeEach(() => {
