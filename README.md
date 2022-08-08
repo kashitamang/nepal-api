@@ -22,18 +22,17 @@ With the nepal-api, you can:
 # Using the API
 This is a RESTful API, meaning that it uses predictable URLs to access resources.
 
-# Request Structure
+## Request Structure
 To import a curl request, copy the request structure from <a href="https://nepal-api.herokuapp.com/">the live site</a>, on Postman visit <code>import</code> on the left hand sidebar > <code>raw text</code> > <code>continue</code> > <code>import</code> and <code>send</code> the request to receive JSON. The API is accessed through GET requests following this overall pattern:
 
-<div align="center">
-  <code>
-    curl -H https://nepal-api.herokuapp.com/districts 
-  </code>
+
+```
+curl -H https://nepal-api.herokuapp.com/districts 
+```
   
 # Response Structure
   <code>[{"id":"1","name":"Gorkha"},{"id":"2","name":"Kathmandu"},{"id":"3","name":"Pokhara"}]
   </code>
-</div>
 
 # Endpoints
 Please visit the live site for a complete list of curl requests and endpoints.
