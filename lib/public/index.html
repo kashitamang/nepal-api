@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles.css" rel="stylesheet" />
+    <title>Nepal Api</title>
+</head>
+<body>
+    <header>
+        <h1>nepal-api</h1>
+        <p>Use this free api to create, read, update and delete data on Nepal's 
+            caste system, districts, exports, flowers, and religions.
+        </p>
+    </header>
+    <main>
+        <div class="tables">
+            <table class="districts-table">
+                <h4>districts</h4>
+                <tr>
+                  <th>Route</th>
+                  <th>Method</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>/districts</td>
+                  <td>GET</td>
+                  <td><a href="/districts">get a list of all</a></td>
+                </tr>
+                <tr>
+                    <td>/districts/:id</td>
+                    <td>GET</td>
+                    <td><a href="/districts/1">get single by id</a></td>
+                </tr>
+                <tr>
+                    <td>/districts</td>
+                    <td>POST</td>
+                    <td>
+                        <code>curl -d '{"name": "< text >",  "population": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/castes'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>/districts</td>
+                    <td>PATCH</td>
+                    <td>
+                        <code>curl -d '{"id": "< text >",  "name": "< text >",  "population": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/castes'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>/districts</td>
+                    <td>DELETE</td>
+                    <td>
+                        <code>curl -d '{"id": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/castes'</code>
+                    </td>
+                </tr>
+            </table>
+            <table class="castes-table">
+                <h4>castes</h4>
+                <tr>
+                  <th>Route</th>
+                  <th>Method</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>/castes</td>
+                  <td>GET</td>
+                  <td><a href="/castes">get a list of all</a></td>
+                </tr>
+                <tr>
+                    <td>/castes/:id</td>
+                    <td>GET</td>
+                    <td><a href="/castes/1">get single by id</a></td>
+                </tr>
+                <tr>
+                    <td>/castes</td>
+                    <td>POST</td>
+                    <td>
+                        <code>curl -d '{"name": "< text >",  "meaning": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/castes'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>/castes</td>
+                    <td>PATCH</td>
+                    <td>
+                        <code>curl -d '{"id": "< text >",  "name": "< text >",  "meaning": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/castes'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>/castes</td>
+                    <td>DELETE</td>
+                    <td>
+                        <code>curl -d '{"id": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/castes'</code>
+                    </td>
+                </tr>
+            </table>
+            <table class="flowers-table">
+                <h4>flowers</h4>
+                <tr>
+                  <th>Route</th>
+                  <th>Method</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>/flowers</td>
+                  <td>GET</td>
+                  <td><a href="/flowers">get a list of all</a></td>
+                </tr>
+                <tr>
+                    <td>/flowers/:id</td>
+                    <td>GET</td>
+                    <td><a href="/flowers/1">get single by id</a></td>
+                </tr>
+                <tr>
+                    <td>/flowers</td>
+                    <td>POST</td>
+                    <td>
+                        <code>curl -d '{"name": "< text >",  "color": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/flowers'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>/flowers</td>
+                    <td>PATCH</td>
+                    <td>
+                        <code>curl -d '{"id": "< text >",  "name": "< text >",  "color": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/flowers'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>/flowers</td>
+                    <td>DELETE</td>
+                    <td>
+                        <code>curl -d '{"id": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/flowers'</code>
+                    </td>
+                </tr>
+            </table>
+            <table class="religions-table">
+                <h4>religions</h4>
+                <tr>
+                  <th>Route</th>
+                  <th>Method</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>/religions</td>
+                  <td>GET</td>
+                  <td><a href="/religions">get a list of all</a></td>
+                </tr>
+                <tr>
+                    <td>/religions/:id</td>
+                    <td>GET</td>
+                    <td><a href="/religions/1">get single by id</a></td>
+                </tr>
+                <tr>
+                    <td>/religions</td>
+                    <td>POST</td>
+                    <td>
+                        <code>curl -d '{"type": "< text >",  "percentage_2011": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/religions'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>/religions</td>
+                    <td>PATCH</td>
+                    <td>
+                        <code>curl -d '{"id": "< text >",  "type": "< text >",  "percentage_2011": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/religions'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>/religions</td>
+                    <td>DELETE</td>
+                    <td>
+                        <code>curl -d '{"id": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/religions'</code>
+                    </td>
+                </tr>
+            </table>
+            <table class="exports-table">
+                <h4>exports</h4>
+                <tr>
+                  <th>Route</th>
+                  <th>Method</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>/exports</td>
+                  <td>GET</td>
+                  <td><a href="/exports">get a list of all</a></td>
+                </tr>
+                <tr>
+                    <td>/exports/:id</td>
+                    <td>GET</td>
+                    <td><a href="/exports/1">get single by id</a></td>
+                </tr>
+                <tr>
+                    <td>/exports</td>
+                    <td>POST</td>
+                    <td>
+                        <code>curl -d '{"type": "< text >",  "revenue_2020": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/exports'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>/exports</td>
+                    <td>PATCH</td>
+                    <td>
+                        <code>curl -d '{"id": "< text >",  "type": "< text >",  "revenue_2020": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/exports'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>/exports</td>
+                    <td>DELETE</td>
+                    <td>
+                        <code>curl -d '{"id": "< text >" }' -H 'Content-Type: application/json' 'https://nepal-api.herokuapp.com/exports'</code>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>maintained by<a href="https://github.com/kashitamang/nepal-api">kashitamang</a></footer>
+</body>
+</html>
